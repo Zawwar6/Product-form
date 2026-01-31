@@ -1,18 +1,25 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProductForm from "./pages/ProductForm"
+import ShowDetail from "./pages/ShowDetail";
 
-import ShowDetail from './pages/ShowDetail'
-import ProductForm from './pages/ProductForm'
+function App() {
+  const [speakers, setSpeakers] = useState([]); // central state for all speakers
 
-const App = () => {
   return (
-    <>
+    
       <Routes>
-        <Route path='/' element ={<ProductForm/>} />
-        <Route path="/show-detail" element={<ShowDetail />} />
+        <Route
+          path="/"
+          element={<ProductForm speakers={speakers} setSpeakers={setSpeakers} />}
+        />
+        <Route
+          path="/show-detail"
+          element={<ShowDetail speakers={speakers} setSpeakers={setSpeakers} />}
+        />
       </Routes>
-    </>
-  )
+    
+  );
 }
 
-export default App
+export default App;
