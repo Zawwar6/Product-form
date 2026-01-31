@@ -83,6 +83,46 @@ const ProductForm = () => {
             </select>
           </div>
 
+          {/* Speaker Image */}
+<div>
+  <label className="block text-sm font-medium text-gray-700 mb-1">
+    Speaker Photo
+  </label>
+
+  <div className="flex items-center justify-center w-full">
+    <label className="flex flex-col items-center justify-center w-full h-40 border-2 border-dashed border-indigo-300 rounded-xl cursor-pointer bg-indigo-50 hover:bg-indigo-100 transition">
+      
+      <svg
+        className="w-10 h-10 text-indigo-400 mb-2"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M7 16V4a1 1 0 011-1h8a1 1 0 011 1v12M7 16l-2 2m2-2l2 2m6-2l2 2m-2-2l-2 2"
+        />
+      </svg>
+
+      <p className="text-sm text-gray-600">
+        <span className="font-semibold">Click to upload</span> or drag & drop
+      </p>
+      <p className="text-xs text-gray-500 mt-1">
+        PNG, JPG (max 5MB)
+      </p>
+
+      <input
+        type="file"
+        accept="image/*"
+        className="hidden"
+      />
+    </label>
+  </div>
+</div>
+
+
           {/* Bio */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
