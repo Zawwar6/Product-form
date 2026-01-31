@@ -1,14 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const ShowDetail = ({ speakers, setSpeakers }) => {
+const ShowDetail = ({ speakers, setSpeakers, setEditingIndex }) => {
+  const navigate = useNavigate();
+
+  const handleEdit = (index) => {
+    setEditingIndex(index);
+    navigate("/"); // open form with pre-filled data
+  };
+
   const handleDelete = (index) => {
     const updatedSpeakers = [...speakers];
     updatedSpeakers.splice(index, 1);
     setSpeakers(updatedSpeakers);
-  };
-
-  const handleEdit = (index) => {
-    alert(`Edit speaker at index ${index}`);
   };
 
   return (
@@ -16,7 +20,6 @@ const ShowDetail = ({ speakers, setSpeakers }) => {
       <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
         Speaker Details
       </h2>
-
       <table className="w-full border-collapse bg-white shadow-md rounded-xl overflow-hidden">
         <thead className="bg-indigo-100">
           <tr>
@@ -31,7 +34,6 @@ const ShowDetail = ({ speakers, setSpeakers }) => {
             <th className="p-3 text-left">Actions</th>
           </tr>
         </thead>
-
         <tbody>
           {speakers.length === 0 ? (
             <tr>
