@@ -65,13 +65,13 @@ const ShowDetail = ({ speakers, setSpeakers, setEditingIndex }) => {
                 <td className="p-3 space-x-2">
                   <button
                     onClick={() => handleEdit(idx)}
-                    className="px-3 py-1 bg-yellow-400 text-white rounded hover:bg-yellow-500"
+                    className="px-3 py-1 cursor-pointer bg-yellow-400 text-white rounded hover:bg-yellow-500"
                   >
                     Edit
                   </button>
                   <button
                     onClick={() => handleDelete(idx)}
-                    className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600"
+                    className="px-3 cursor-pointer py-1 bg-red-500 text-white rounded hover:bg-red-600"
                   >
                     Delete
                   </button>
