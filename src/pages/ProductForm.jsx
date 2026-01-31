@@ -201,7 +201,7 @@ const ProductForm = ({ speakers, setSpeakers }) => {
             </button>
             <button
               type="submit"
-              className="px-6 py-2 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition shadow-md"
+              className="px-6 py-2 cursor-pointer rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition shadow-md"
             >
               Save Speaker
             </button>
